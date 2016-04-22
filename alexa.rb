@@ -10,6 +10,10 @@ before do
   content_type('application/json')
 end
 
+get '/' do
+  "Hello World!"
+end
+
 post '/' do
   request_json = JSON.parse(request.body.read.to_s)
   request = AlexaRubykit.build_request(request_json)
