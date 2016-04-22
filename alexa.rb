@@ -3,8 +3,6 @@ require 'json'
 require 'bundler/setup'
 require 'alexa_rubykit'
 require 'httparty'
-require 'open-uri'
-require 'ffaker'
 require 'access'
 require './deals'
 

@@ -1,0 +1,39 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    access (2.0.51)
+      hashie (~> 3.3.1)
+      httparty (~> 0.13.3)
+    alexa_rubykit (1.1.0)
+      bundler (~> 1.7)
+      rake (~> 10.0)
+    dotenv (2.1.1)
+    hashie (3.3.2)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.3)
+    multi_xml (0.5.5)
+    rack (1.6.4)
+    rack-protection (1.5.3)
+      rack
+    rake (10.5.0)
+    sinatra (1.4.7)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    tilt (2.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  access
+  alexa_rubykit
+  dotenv
+  hashie
+  httparty
+  sinatra
+
+BUNDLED WITH
+   1.11.2
