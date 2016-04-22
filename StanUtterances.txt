@@ -1,0 +1,26 @@
+AccessDeals find me a {20|PercentOff} percent off deal
+AccessDeals to find me a {20|PercentOff} percent off deal
+AccessDeals to find a {20|PercentOff} percent off deal
+AccessDeals find a {20|PercentOff} percent off deal
+
+
+AccessDeals find me a restaurant with {15|PercentOff} percent off deal
+AccessDeals to find me a restaurant with {15|PercentOff} percent off deal
+AccessDeals find a restaurant with {15|PercentOff} percent off deal
+AccessDeals find me a restaurant with {15|PercentOff} percent off deal
+
+AccessDeals find me a {Restaurant|RestaurantName}
+AccessDeals to find me a {Restaurant|RestaurantName}
+AccessDeals find a {Restaurant|RestaurantName}
+AccessDeals find me a {Restaurant|RestaurantName}
+AccessDeals find me {Restaurant|RestaurantName}
+AccessDeals find {Restaurant|RestaurantName}
+
+
+AccessDeals find me {Tacos|FoodType}
+AccessDeals find {Tacos|FoodType}
+AccessDeals to find me {Tacos|FoodType}
+AccessDeals to find {Tacos|FoodType}
+AccessDeals I want {Tacos|FoodType}
+AccessDeals please find me {Tacos|FoodType}
+AccessDeals please find {Tacos|FoodType}
