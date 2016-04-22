@@ -17,10 +17,14 @@ AccessDeals find me {Restaurant|RestaurantName}
 AccessDeals find {Restaurant|RestaurantName}
 
 
-AccessDeals find me {Tacos|FoodType}
-AccessDeals find {Tacos|FoodType}
-AccessDeals to find me {Tacos|FoodType}
-AccessDeals to find {Tacos|FoodType}
-AccessDeals I want {Tacos|FoodType}
-AccessDeals please find me {Tacos|FoodType}
-AccessDeals please find {Tacos|FoodType}
+AccessDeals find me {Tacos|DealType}
+AccessDeals find {Tacos|DealType}
+AccessDeals to find me {Tacos|DealType}
+AccessDeals to find {Tacos|DealType}
+AccessDeals find me {Tacos|DealType} deals
+AccessDeals find {Tacos|DealType} deals
+AccessDeals to find me {Tacos|DealType} deals
+AccessDeals to find {Tacos|DealType} deals
+AccessDeals I want {Tacos|DealType}
+AccessDeals please find me {Tacos|DealType}
+AccessDeals please find {Tacos|DealType}

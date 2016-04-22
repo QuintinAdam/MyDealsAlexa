@@ -1,0 +1,17 @@
+{
+  "intents": [
+    {
+      "intent": "AccessDeals",
+      "slots": [
+        {
+          "name": "DealType",
+          "type": "LITERAL"
+        }
+      ]
+    },
+    {
+      "intent": "HelpIntent",
+      "slots": []
+    }
+  ]
+}
