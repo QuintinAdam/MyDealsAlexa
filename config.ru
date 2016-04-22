@@ -1,5 +1,3 @@
-require './alexa'
-require 'dotenv'
-Dotenv.load
+require 'alexa'
 
 run Sinatra::Application

@@ -4,7 +4,7 @@ require 'bundler/setup'
 require 'alexa_rubykit'
 require 'httparty'
 require 'access'
-require './deals'
+# require './deals'
 
 before do
   content_type('application/json')
