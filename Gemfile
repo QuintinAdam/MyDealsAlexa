@@ -1,0 +1,8 @@
+source 'http://rubygems.org'
+gem 'sinatra'
+gem 'alexa_rubykit'
+gem 'httparty'
+gem 'hashie'
+gem 'ffaker'
+# gem 'twilio-ruby'
+gem 'dotenv'

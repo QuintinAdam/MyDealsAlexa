@@ -1,0 +1,64 @@
+require 'sinatra'
+require 'json'
+require 'bundler/setup'
+require 'alexa_rubykit'
+require 'httparty'
+require 'open-uri'
+require 'ffaker'
+require './deals'
+
+before do
+  content_type('application/json')
+end
+
+post '/' do
+  request_json = JSON.parse(request.body.read.to_s)
+  request = AlexaRubykit.build_request(request_json)
+
+  session = request.session
+
+  response = AlexaRubykit::Response.new
+
+  if (request.type == 'LAUNCH_REQUEST')
+    response.add_speech('My Deals is running!')
+    response.add_hash_card( { title: 'My Deals Run', subtitle: 'My Deals Running!' } )
+  end
+
+  if (request.type == 'INTENT_REQUEST')
+    case request.name
+    when "MeanAlexaIntent"
+      persons_name = request.slots["PersonName"]["value"]
+      insult = Insult.insult
+      response.add_speech("#{persons_name}, #{insult}")
+      response.add_hash_card( { title: "insult for #{persons_name}", subtitle: "#{insult}" } )
+    when "NiceAlexaIntent"
+      persons_name = request.slots["PersonName"]["value"]
+      motivation = Insult.motivation
+      response.add_speech("#{persons_name}, #{motivation}")
+      response.add_hash_card( { title: "motivation for #{persons_name}", subtitle: "#{motivation}" } )
+    when "MessageMeIntent"
+      message = request.slots["Message"]["value"]
+      Messenger.new.message(message)
+      response.add_speech("I sent you, the message: #{message}")
+      response.add_hash_card( { title: "Sent you a text message!", subtitle: "I sent you, the message: #{message}" } )
+    when "PhilsosophyIntent"
+      message = Philosophy.get_quote.sample
+      response.add_speech("#{message}")
+      response.add_hash_card( { title: "A bit of philosophy for you...", subtitle: "#{message}" } )
+    when "ShowerThoughtIntent"
+      shower_thought = ShowerThought.get_thought
+      response.add_speech(shower_thought)
+      response.add_hash_card( { title: "A shower tough for you...", subtitle: "#{shower_thought}" } )
+    else
+      response.add_speech("I really do not want to help you!")
+    end
+  end
+
+  if (request.type =='SESSION_ENDED_REQUEST')
+    p "#{request.type}"
+    p "#{request.reason}"
+    halt 200
+  end
+
+  response.build_response
+end
