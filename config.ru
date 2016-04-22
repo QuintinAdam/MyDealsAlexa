@@ -1,3 +1,3 @@
-require 'alexa'
+require './alexa'
 
 run Sinatra::Application
